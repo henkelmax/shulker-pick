@@ -15,7 +15,7 @@ public class InventoryMixin {
     private boolean isSameItemSameTags(ItemStack stack1, ItemStack stack2) {
         if (stack1.getItem() instanceof BlockItem blockItem) {
             if (blockItem.getBlock() instanceof ShulkerBoxBlock) {
-                return ItemStack.isSame(stack1, stack2);
+                return ItemStack.isSameItem(stack1, stack2);
             }
         }
         return ItemStack.isSameItemSameTags(stack1, stack2);
